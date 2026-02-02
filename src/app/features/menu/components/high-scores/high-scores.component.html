@@ -1,0 +1,40 @@
+<div class="high-scores">
+  <div class="container">
+    <h1>HIGH SCORES</h1>
+    @if (highScores.length > 0) {
+      <table class="scores-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Score</th>
+            <th>Lines</th>
+            <th>Level</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (score of highScores; track $index) {
+            <tr [class.highlight]="$index < 3">
+              <td class="rank">#{{ $index + 1 }}</td>
+              <td class="score">{{ score.score | number }}</td>
+              <td>{{ score.lines }}</td>
+              <td>{{ score.level }}</td>
+              <td class="date">{{ score.date | date:'short' }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    } @else {
+      <div class="no-scores">
+        <p>No high scores yet!</p>
+        <p>Play a game to set your first score.</p>
+      </div>
+    }
+    <div class="actions">
+      <button class="back-btn" (click)="goBack()">← Back to Menu</button>
+      @if (highScores.length > 0) {
+        <button class="clear-btn" (click)="clearScores()">Clear Scores</button>
+      }
+    </div>
+  </div>
+</div>

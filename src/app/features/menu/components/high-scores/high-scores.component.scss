@@ -1,0 +1,126 @@
+.high-scores {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+  padding: 20px;
+}
+
+.container {
+  background: rgba(26, 26, 46, 0.9);
+  border: 2px solid #4a4a6a;
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 700px;
+  width: 100%;
+}
+
+h1 {
+  color: #00f0f0;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px rgba(0, 240, 240, 0.5);
+}
+
+.scores-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.scores-table th,
+.scores-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #4a4a6a;
+}
+
+.scores-table th {
+  color: #888;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.scores-table td {
+  color: #fff;
+}
+
+.scores-table .rank {
+  color: #00f0f0;
+  font-weight: bold;
+}
+
+.scores-table .score {
+  color: #f0f000;
+  font-weight: bold;
+}
+
+.scores-table .date {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.scores-table tr.highlight {
+  background: rgba(0, 240, 240, 0.1);
+}
+
+.scores-table tr:nth-child(1) .rank {
+  color: #ffd700;
+}
+
+.scores-table tr:nth-child(2) .rank {
+  color: #c0c0c0;
+}
+
+.scores-table tr:nth-child(3) .rank {
+  color: #cd7f32;
+}
+
+.no-scores {
+  text-align: center;
+  padding: 40px;
+  color: #888;
+}
+
+.no-scores p:first-child {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.back-btn,
+.clear-btn {
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.back-btn {
+  background: #4a4a6a;
+  color: #fff;
+}
+
+.back-btn:hover {
+  background: #5a5a7a;
+}
+
+.clear-btn {
+  background: transparent;
+  border: 1px solid #f00000;
+  color: #f00000;
+}
+
+.clear-btn:hover {
+  background: rgba(240, 0, 0, 0.1);
+}
