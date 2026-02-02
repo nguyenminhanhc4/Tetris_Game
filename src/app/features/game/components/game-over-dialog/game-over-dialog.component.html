@@ -1,0 +1,20 @@
+<div class="game-over-overlay">
+  <div class="game-over-dialog">
+    <h2>GAME OVER</h2>
+    <div class="stats">
+      <div class="stat-item">
+        <span class="label">SCORE</span>
+        <span class="value">{{ score }}</span>
+      </div>
+      <div class="stat-item">
+        <span class="label">LINES</span>
+        <span class="value">{{ lines }}</span>
+      </div>
+      <div class="stat-item">
+        <span class="label">LEVEL</span>
+        <span class="value">{{ level }}</span>
+      </div>
+    </div>
+    <button class="restart-btn" (click)="onRestart()">PLAY AGAIN</button>
+  </div>
+</div>

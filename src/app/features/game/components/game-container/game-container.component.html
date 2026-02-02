@@ -1,0 +1,44 @@
+<div class="game-wrapper">
+  <div class="game-header">
+    <h1>TETRIS</h1>
+  </div>
+
+  <div class="game-layout">
+    <div class="game-main">
+      @if (gameServiceRef.status() === GameStatus.INIT) {
+        <div class="start-overlay">
+          <button class="start-btn" (click)="startGame()">START GAME</button>
+        </div>
+      }
+
+      <canvas
+        #gameCanvas
+        width="300"
+        height="600"
+        class="game-canvas"
+      ></canvas>
+
+      @if (gameServiceRef.status() === GameStatus.PAUSED) {
+        <div class="pause-overlay">
+          <h2>PAUSED</h2>
+          <button (click)="pauseGame()">Resume</button>
+        </div>
+      }
+    </div>
+
+    <div class="game-sidebar">
+      <app-score-board></app-score-board>
+      <app-next-piece></app-next-piece>
+      <app-game-controls></app-game-controls>
+    </div>
+  </div>
+
+  @if (gameServiceRef.isGameOver()) {
+    <app-game-over-dialog
+      [score]="gameServiceRef.scoreValue()"
+      [lines]="gameServiceRef.linesValue()"
+      [level]="gameServiceRef.levelValue()"
+      (restart)="resetGame()"
+    ></app-game-over-dialog>
+  }
+</div>

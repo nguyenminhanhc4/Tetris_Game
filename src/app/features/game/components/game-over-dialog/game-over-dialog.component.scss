@@ -1,0 +1,71 @@
+.game-over-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.game-over-dialog {
+  background: #1a1a2e;
+  border: 3px solid #4a4a6a;
+  border-radius: 12px;
+  padding: 30px 50px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.game-over-dialog h2 {
+  color: #f00000;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px rgba(240, 0, 0, 0.5);
+}
+
+.stats {
+  margin-bottom: 25px;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding: 0 20px;
+}
+
+.stat-item:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.value {
+  color: #00f0f0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.restart-btn {
+  padding: 12px 40px;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, #00f0f0, #00a0a0);
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.restart-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 240, 240, 0.5);
+}

@@ -1,0 +1,39 @@
+.controls {
+  background: #1a1a2e;
+  border: 2px solid #4a4a6a;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.controls h3 {
+  color: #888;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.control-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.control-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.key {
+  background: #4a4a6a;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  min-width: 60px;
+  text-align: center;
+}
+
+.action {
+  color: #aaa;
+  font-size: 0.8rem;
+}
