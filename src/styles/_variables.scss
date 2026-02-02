@@ -1,0 +1,25 @@
+$primary-color: #00f0f0;
+$secondary-color: #4a4a6a;
+$background-dark: #0f0f1a;
+$background-light: #1a1a2e;
+$text-color: #ffffff;
+$text-muted: #888888;
+
+$tetris-colors: (
+  'I': #00f0f0,
+  'O': #f0f000,
+  'T': #a000f0,
+  'L': #f0a000,
+  'J': #0000f0,
+  'S': #00f000,
+  'Z': #f00000,
+);
+
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+
+$transition-fast: 0.2s ease;
+$transition-medium: 0.3s ease;
+
+$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
