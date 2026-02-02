@@ -17,6 +17,12 @@ export class Tetromino {
     this.position = position;
   }
 
+  static fromShape(type: TetrominoType, position: Position, shape: Shape): Tetromino {
+    const tetromino = new Tetromino(type, position);
+    tetromino.shape = tetromino.cloneShape(shape);
+    return tetromino;
+  }
+
   move(dx: number, dy: number): void {
     this.position = {
       x: this.position.x + dx,
